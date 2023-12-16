@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'Vue3 Component Library template',
   description: 'Vitepress documentation example for pidekit repository',
   lang: 'en-US',
-  base: '/pidekit/',
+  base: '/PideKit/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.webp',
