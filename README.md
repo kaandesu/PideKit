@@ -17,11 +17,11 @@
     <br />        
     <br />
     <!-- CHANGER IT WITH YOUR GITHUB PAGES LINK -->
-    <a href="https://kaandesu.github.io/pidekit/#/">Live Demo</a>
+    <a href="https://kaandesu.github.io/PideKit/#/">Live Demo</a>
     ·<!-- CHANGER IT WITH YOUR GITHUB ISSUES LINK -->
-    <a href="https://github.com/kaandesu/pidekit/issues">Report Bug</a>
+    <a href="https://github.com/kaandesu/PideKit/issues">Report Bug</a>
     ·<!-- CHANGER IT WITH YOUR GITHUB ISSUES LINK -->
-    <a href="https://github.com/kaandesu/pidekit/issues">Request Feature</a>
+    <a href="https://github.com/kaandesu/PideKit/issues">Request Feature</a>
   </p>
 </div>
 
@@ -43,7 +43,7 @@
 <br>
 <!-- GETTING STARTED -->
 
-> [!NOTE] This README.md mainly contains information about how to setup the [project](#project-setup) and the [repository/automation](#repository-and-automation-setup). However, it is also made for users to use this README as a template as well. So, it is highly recommended to edit this README.md file to make it your own. For feature requests, don't hesitate to open an [issue](https://github.com/kaandesu/pidekit/issues/new)!
+> [!NOTE] This README.md mainly contains information about how to setup the [project](#project-setup) and the [repository/automation](#repository-and-automation-setup). However, it is also made for users to use this README as a template as well. So, it is highly recommended to edit this README.md file to make it your own. For feature requests, don't hesitate to open an [issue](https://github.com/kaandesu/PideKit/issues/new)!
 
 ## Project Setup
 
@@ -127,7 +127,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Contributing
 
-Contributions to the project is highly appreciated. If you have any suggestions/questions/requests please consider [opening an issue](https://github.com/kaandesu/pidekit/issues/new). If you want to contribute to the project, fixing an open issue is greatly recommended and appreciated. To see the all contribution rules please check the [contribution rules](CONTRIBUTING.md).
+Contributions to the project is highly appreciated. If you have any suggestions/questions/requests please consider [opening an issue](https://github.com/kaandesu/PideKit/issues/new). If you want to contribute to the project, fixing an open issue is greatly recommended and appreciated. To see the all contribution rules please check the [contribution rules](CONTRIBUTING.md).
 
 <!-- LICENSE -->
 

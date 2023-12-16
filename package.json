@@ -27,9 +27,9 @@
     "type": "git",
     "url": "https://github.com/kaandesu/pidekit.git"
   },
-  "homepage": "https://kaandesu.github.io/pidekit/",
+  "homepage": "https://kaandesu.github.io/PideKit/",
   "bugs": {
-    "url": "https://github.com/kaandesu/pidekit/issues"
+    "url": "https://github.com/kaandesu/PideKit/issues"
   },
   "files": [
     "dist"

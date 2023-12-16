@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Live Demo
-      link: https://kaandesu.github.io/pidekit/live-demo/index.html
+      link: https://kaandesu.github.io/PideKit/live-demo/index.html
     - theme: brand
       text: Storybook
-      link: https://kaandesu.github.io/pidekit/storybook/index.html
+      link: https://kaandesu.github.io/PideKit/storybook/index.html
     - theme: alt
       text: Markdown Examples
       link: /markdown-examples
@@ -20,8 +20,8 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-    src: https://raw.githubusercontent.com/kaandesu/pidekit/main/public/logo.webp
-    alt: pidekit
+    src: https://raw.githubusercontent.com/kaandesu/PideKit/main/public/logo.webp
+    alt: PideKit
 
 features:
   - title: Feature A

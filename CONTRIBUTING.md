@@ -28,11 +28,11 @@ When pushing your changes, always include a **changeset** file. You can do this 
 
 ### 🐛 **Did you find a bug?**
 
-Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/kaandesu/pidekit/issues). If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/kaandesu/pidekit/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible demonstrating the expected behavior that is not occurring.
+Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/kaandesu/PideKit/issues). If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/kaandesu/PideKit/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible demonstrating the expected behavior that is not occurring.
 
 ### 💡 **Do you want to add a new feature or change an existing one?**
 
-[Open a GitHub issue](https://github.com/kaandesu/pidekit/issues/new) stating your feature request clearly. We can discuss it on the issue thread, then you can implement it! 🎉
+[Open a GitHub issue](https://github.com/kaandesu/PideKit/issues/new) stating your feature request clearly. We can discuss it on the issue thread, then you can implement it! 🎉
 
 ### ✨ **Did you write a change that fixes a bug?**
 
