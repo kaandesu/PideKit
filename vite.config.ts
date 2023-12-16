@@ -38,7 +38,7 @@ export default defineConfig(({ mode }) => {
         lib: {
           entry: resolve(__dirname, 'src/myComponentLibrary/index.ts'),
           name: 'Vue3ComponentLibraryTemplate',
-          fileName: 'vue3-component-library-template',
+          fileName: 'pidekit',
         },
         rollupOptions: {
           external: ['vue'],

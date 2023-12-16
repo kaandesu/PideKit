@@ -1,38 +1,45 @@
 {
-  "name": "vue3-component-library-template",
-  "author": "Your name <yourmail@mail.com> (https://github.com/[USERNAME])",
-  "version": "0.0.0",
+  "name": "pidekit",
+  "author": "I Kaan Yilmaz <kaandesu00@gmail.com> (https://github.com/kaandesu)",
+  "version": "0.0.1",
   "license": "MIT",
   "private": false,
-  "description": "Your package description",
+  "description": "Vue3 component library using Radix primitives, seamlessly styled with Tailwind CSS for rapid and flexible UI development. Elevate your Vue projects with accessible and customizable components.",
   "contributors": [
     {
-      "name": "Your name",
-      "email": "yourmail@mail.com"
+      "name": "I Kaan Yilmaz",
+      "email": "kaandesu00@gmail.com"
+    },
+    {
+      "name": "Ege Onder",
+      "email": "40398628+EgeOnder@users.noreply.github.com"
     }
   ],
   "keywords": [
-    "some",
-    "keywords",
-    "here"
+    "vue3",
+    "component library",
+    "primitives",
+    "tailwind",
+    "radix",
+    "components"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/[USERNAME]/vue3-component-library-template.git"
+    "url": "https://github.com/kaandesu/pidekit.git"
   },
-  "homepage": "https://[USERNAME].github.io/vue3-component-library-template/",
+  "homepage": "https://kaandesu.github.io/pidekit/",
   "bugs": {
-    "url": "https://github.com/[USERNAME]/vue3-component-library-template/issues"
+    "url": "https://github.com/kaandesu/pidekit/issues"
   },
   "files": [
     "dist"
   ],
-  "main": "./dist/vue3-component-library-template.umd.cjs",
-  "module": "./dist/vue3-component-library-template.js",
+  "main": "./dist/pidekit.umd.cjs",
+  "module": "./dist/pidekit.js",
   "exports": {
     ".": {
-      "import": "./dist/vue3-component-library-template.js",
-      "require": "./dist/vue3-component-library-template.umd.cjs",
+      "import": "./dist/pidekit.js",
+      "require": "./dist/pidekit.umd.cjs",
       "types": "./dist/types/index.d.ts"
     },
     "./style.css": "./dist/style.css"

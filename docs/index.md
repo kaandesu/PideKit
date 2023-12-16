@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: 'Vue3 Component Library Template'
-  text: 'Vitepress documentation example'
-  tagline: My great package tagline
+  name: 'PideKit UI'
+  text: 'Blazingly beautiful UI components for Vue3 '
+  tagline: Elavate UX with DX
   actions:
     - theme: brand
       text: Live Demo
-      link: https://kaandesu.github.io/vue3-component-library-template/live-demo/index.html
+      link: https://kaandesu.github.io/pidekit/live-demo/index.html
     - theme: brand
       text: Storybook
-      link: https://kaandesu.github.io/vue3-component-library-template/storybook/index.html
+      link: https://kaandesu.github.io/pidekit/storybook/index.html
     - theme: alt
       text: Markdown Examples
       link: /markdown-examples
@@ -20,8 +20,8 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-    src: https://raw.githubusercontent.com/kaandesu/vue3-component-library-template/main/public/logo.webp
-    alt: vue3-component-library-template
+    src: https://raw.githubusercontent.com/kaandesu/pidekit/main/public/logo.webp
+    alt: pidekit
 
 features:
   - title: Feature A

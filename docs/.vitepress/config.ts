@@ -3,9 +3,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Vue3 Component Library template',
-  description: 'Vitepress documentation example for vue3-component-library-template repository',
+  description: 'Vitepress documentation example for pidekit repository',
   lang: 'en-US',
-  base: '/vue3-component-library-template/',
+  base: '/pidekit/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.webp',
@@ -24,8 +24,6 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/kaandesu/vue3-component-library-template' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/kaandesu/pidekit' }],
   },
 })
