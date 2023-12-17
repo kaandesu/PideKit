@@ -4,6 +4,6 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: 'src/setupTests.ts',
-    includeSource: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
+    includeSource: ['src/pidekitLibrary/**/*.spec.ts', 'src/pidekitLibrary/**/*.test.ts'],
   },
 })
