@@ -19,6 +19,9 @@ coverage
 docs/.vitepress/dist
 docs/.vitepress/cache
 
+.rollup-inspect
+.vite-inspect
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
