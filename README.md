@@ -10,17 +10,14 @@
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) <!-- Title -->
 
-  <h3 align="center">Complete Vue3 Component Library Template</h3>
+  <h3 align="center">PideKit UI</h3>
    <!-- DESCRIPTION -->
   <p align="center">
-    An all-in-one solution for crafting Vue3-based Component Library with Vite, complete with built-in GitHub Pages live-demo deployment, automated test-and-build workflows, and Vite-powered unit test configuration, including coverage analysis and a README.md template for your library.
+    🚀 Vue3 component library using Radix primitives, seamlessly styled with Tailwind CSS for rapid and flexible UI development. Elevate your Vue projects with accessible and customizable components.
     <br />        
-    <br />
-    <!-- CHANGER IT WITH YOUR GITHUB PAGES LINK -->
-    <a href="https://kaandesu.github.io/PideKit/#/">Live Demo</a>
-    ·<!-- CHANGER IT WITH YOUR GITHUB ISSUES LINK -->
-    <a href="https://github.com/kaandesu/PideKit/issues">Report Bug</a>
-    ·<!-- CHANGER IT WITH YOUR GITHUB ISSUES LINK -->
+    <br />    
+    <a href="https://kaandesu.github.io/PideKit/#/">Live Demo</a>    
+    <a href="https://github.com/kaandesu/PideKit/issues">Report Bug</a>    
     <a href="https://github.com/kaandesu/PideKit/issues">Request Feature</a>
   </p>
 </div>

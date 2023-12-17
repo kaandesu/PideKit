@@ -2,6 +2,7 @@ import { defineConfig, PluginOption } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
+// @ts-ignore
 import RadixVueResolver from 'radix-vue/resolver'
 import { visualizer } from 'rollup-plugin-visualizer'
 import Inspect from 'vite-plugin-inspect'
@@ -16,16 +17,12 @@ export default defineConfig(({ mode }) => {
           dts: true,
           resolvers: [
             RadixVueResolver(),
-
             // RadixVueResolver({
             //   prefix: '' // use the prefix option to add Prefix to the imported components
             // })
           ],
         }),
       ],
-      test: {
-        globals: true,
-      },
       resolve: {
         alias: {
           '~': resolve(__dirname, 'src', 'pidekitLibrary'),
@@ -45,7 +42,6 @@ export default defineConfig(({ mode }) => {
           dts: true,
           resolvers: [
             RadixVueResolver(),
-
             // RadixVueResolver({
             //   prefix: '' // use the prefix option to add Prefix to the imported components
             // })
@@ -64,11 +60,6 @@ export default defineConfig(({ mode }) => {
         }), // keep this as last one
         ,
       ],
-      test: {
-        globals: true,
-        setupFiles: 'src/setupTests.ts',
-        includeSource: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
-      },
       resolve: {
         alias: {
           '~': resolve(__dirname, 'src', 'pidekitLibrary'),
