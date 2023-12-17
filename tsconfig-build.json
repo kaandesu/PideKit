@@ -14,9 +14,9 @@
     "types": ["node"],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/myComponentLibrary/*"]
+      "~/*": ["src/pidekitLibrary/*"]
     }
   },
-  "include": ["src/myComponentLibrary/*.ts", "src/myComponentLibrary/*.d.ts"],
+  "include": ["src/pidekitLibrary/*.ts", "src/pidekitLibrary/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

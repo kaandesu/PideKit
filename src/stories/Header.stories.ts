@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import MyHeader from '../myComponentLibrary/components/Header.vue'
+import MyHeader from '../pidekitLibrary/components/Header.vue'
 
 const meta = {
   /* 👇 The title prop is optional.

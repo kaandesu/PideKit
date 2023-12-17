@@ -10,7 +10,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import Button from '../src/myComponentLibrary/components/Button.vue'
+import Button from '../src/pidekitLibrary/components/Button.vue'
 
 </script>
 <style scoped>

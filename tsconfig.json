@@ -14,7 +14,7 @@
     "types": ["node", "vitest/globals", "vite/client"],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/myComponentLibrary/*"]
+      "~/*": ["src/pidekitLibrary/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
