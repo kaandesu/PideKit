@@ -40,6 +40,7 @@ export default defineConfig(({ mode }) => {
         vue(),
         Components({
           dts: true,
+          globs: ['src/pidekitLibrary/components/**/*.vue'],
           resolvers: [
             RadixVueResolver(),
             // RadixVueResolver({
