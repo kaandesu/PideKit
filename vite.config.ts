@@ -56,7 +56,7 @@ export default defineConfig(({ mode }) => {
           gzipSize: true,
           brotliSize: true,
           open: false,
-          template: 'sunburst',
+          template: 'treemap',
           filename: '.rollup-inspect/index.html',
         }), // keep this as last one
         ,
