@@ -22,6 +22,8 @@ docs/.vitepress/cache
 .rollup-inspect
 .vite-inspect
 
+components.d.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

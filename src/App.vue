@@ -4,13 +4,10 @@
     <Button primary label="Hello World" size="medium" />
     <Button primary label="Hello World" size="small" />
     <hr>
-    <Button backgroundColor="red" label="Hello World" size="small" />
-    <Button backgroundColor="orange" label="Hello World" size="medium" />
-    <Button backgroundColor="green" label="Hello World" size="large" />
+    <Dialog />
   </div>
 </template>
 <script setup lang="ts">
-import Button from '../src/pidekitLibrary/components/Button.vue'
 
 </script>
 <style scoped>
