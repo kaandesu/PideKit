@@ -1,33 +1,25 @@
 <script setup lang="ts">
-import {
-    DialogClose,
-    DialogContent,
-    DialogDescription,
-    DialogOverlay,
-    DialogPortal,
-    DialogRoot,
-    DialogTitle,
-    DialogTrigger,
-} from 'radix-vue'
+import { Dialog } from '../../namespaced'
+
 import './dialog.css'
 
 
 </script>
 
 <template>
-    <DialogRoot>
-        <DialogTrigger class="Button grass">
+    <Dialog.Root>
+        <Dialog.Trigger class="Button grass">
             Edit profile
-        </DialogTrigger>
-        <DialogPortal>
-            <DialogOverlay class="DialogOverlay" />
-            <DialogContent class="DialogContent">
-                <DialogTitle class="DialogTitle">
+        </Dialog.Trigger>
+        <Dialog.Portal>
+            <Dialog.Overlay class="DialogOverlay" />
+            <Dialog.Content class="DialogContent">
+                <Dialog.Title class="DialogTitle">
                     Edit profile
-                </DialogTitle>
-                <DialogDescription class="DialogDescription">
+                </Dialog.Title>
+                <Dialog.Description class="DialogDescription">
                     Make changes to your profile here. Click save when you're done.
-                </DialogDescription>
+                </Dialog.Description>
                 <fieldset class="Fieldset">
                     <label class="Label" for="name"> Name </label>
                     <input id="name" class="Input" defaultValue="Pedro Duarte">
@@ -37,16 +29,16 @@ import './dialog.css'
                     <input id="username" class="Input" defaultValue="@peduarte">
                 </fieldset>
                 <div :style="{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }">
-                    <DialogClose as-child>
+                    <Dialog.Close as-child>
                         <button class="Button green">
                             Save changes
                         </button>
-                    </DialogClose>
+                    </Dialog.Close>
                 </div>
-                <DialogClose class="IconButton" aria-label="Close">
+                <Dialog.Close class="IconButton" aria-label="Close">
                     <span>X</span>
-                </DialogClose>
-            </DialogContent>
-        </DialogPortal>
-    </DialogRoot>
+                </Dialog.Close>
+            </Dialog.Content>
+        </Dialog.Portal>
+    </Dialog.Root>
 </template>
