@@ -52,8 +52,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm test && vite build --mode production && pnpm generate:types && pnpm build:pages",
-    "build:lib": "pnpm test && vite build --mode production && pnpm generate:types",
+    "build": "pnpm build:lib && pnpm build:pages",
+    "build:lib": "pnpm test && vite build --mode production && pnpm generate:types && pnpm unbuild",
     "clean": "rm -rf ./dist && rm -rf ./live-demo && rm -rf ./coverage && rm -rf ./storybook-static",
     "coverage:web": "http-server ./coverage",
     "generate:types": "vue-tsc -p tsconfig-build.json --declaration --emitDeclarationOnly true --outdir ./dist",
@@ -72,7 +72,7 @@
     "vite:inspect": "npx serve .vite-inspect",
     "unbuild": "unbuild",
     "generate:namespaced": "tsx ./src/pidekitLibrary/namespaced/generate"
-  },
+  },  
   "dependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
     "radix-vue": "^1.2.4",
