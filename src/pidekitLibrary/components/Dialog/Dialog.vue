@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { Dialog } from '../../namespaced'
+/* after building the correct import format will be:
+* import { Dialog } from 'pidekit/namespaced'
+*/
+import * as Dialog from './primitives'
 
 import './dialog.css'
 
