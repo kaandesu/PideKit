@@ -1,14 +1,11 @@
-<!-- PROJECT LOGO -->
-
 <div align="center">
   <a href="https://github.com/kaandesu/pidekit">
-    <img src="public/logo.webp" alt="Logo" width="110">
+    <img src="public/logo.webp" alt="Logo" width="160">
   </a>
 
 <br>
-<!-- add tech stack badges below -->
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) <!-- Title -->
+![Radix UI](https://img.shields.io/badge/radix%20ui-161618.svg?style=for-the-badge&logo=radix-ui&logoColor=white) ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
   <h3 align="center">PideKit UI</h3>
    <!-- DESCRIPTION -->
@@ -16,8 +13,8 @@
     🚀 Vue3 component library using Radix primitives, seamlessly styled with Tailwind CSS for rapid and flexible UI development. Elevate your Vue projects with accessible and customizable components.
     <br />        
     <br />    
-    <a href="https://kaandesu.github.io/PideKit/#/">Live Demo</a>    
-    <a href="https://github.com/kaandesu/PideKit/issues">Report Bug</a>    
+    <a href="https://kaandesu.github.io/PideKit/#/">Live Demo</a>   |
+    <a href="https://github.com/kaandesu/PideKit/issues">Report Bug</a>     |
     <a href="https://github.com/kaandesu/PideKit/issues">Request Feature</a>
   </p>
 </div>
@@ -26,9 +23,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>    
-    <li><a href="#project-setup">Project Setup</a></li>
-    <li><a href="#repository-and-automation-setup">Repository and Automation Setup</a></li>
-    <li><a href="#publishing-to-npm">Publishing to NPM</a></li>
+    <li><a href="#installation-&-setup">Project Setup</a></li>    
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -38,89 +33,156 @@
 </details>
 
 <br>
-<!-- GETTING STARTED -->
 
-> [!NOTE] This README.md mainly contains information about how to setup the [project](#project-setup) and the [repository/automation](#repository-and-automation-setup). However, it is also made for users to use this README as a template as well. So, it is highly recommended to edit this README.md file to make it your own. For feature requests, don't hesitate to open an [issue](https://github.com/kaandesu/PideKit/issues/new)!
+## Installation & Setup
 
-## Project Setup
-
-1. **_Package Name Setup:_** Change the package name (every occurrence) in `package.json` and `vite.config.ts` files.
-
-2. **_Write your plugin:_** Start writing your plugin in the `src/pidekitLibrary` folder. As a default, entry will be from its `index.ts` file. You may change the folder name and/or the entry file name, but don't forget to update the `vite.config.ts` file accordingly.
-
-3. **_ChangesetBot_**: Add Changeset Bot and configure. (See [Changeset Bot](https://github.com/apps/changeset-bot) for details)
-
-## Repository and Automation Setup
-
-1. **_Workflow Permissions for Automation_**: Visit `https://github.com/[username]/[REPOSITORY]/settings/actions` and add workflow permissions (read & write)..
-
-2. **_Enable Github Pages:_** If you have a live-demo to showcase your package, create a new branch called 'gh-pages' for github pages deployment. (The index.html will be built and deployed to this branch seperately from your plugin build. See [deploy.yaml](.github/workflows/deploy.yaml) workflow, delete the file if you don't need it.)
-
-3. **_Branch Security Rules:_** Visit `https://github.com/[username]/[REPOSITORY]/settings/branches` and set the branch protection rules for `main` and `gh-pages` branches. (Requiring pull request reviews before merging to main branch is highly recommended.)
-
-4. **_Codeowners_**: Edit the codeowners file to add your team members as codeowners. (See [CODEOWNERS](CODEOWNERS) for details)
-
-## Publishing to NPM
-
-> Don't forget to update the version number in `package.json` before publishing or use changeset-bot to update version number.
-
-Before publishing test your package, it is recommended to test it locally. First build your package with `npm run build` and create a symbolic link. <br>
-
-1. Navigate to your package's root directory
-
+Install the package from npm
 ```bash
-npm link
+npm i pidekit
 ```
 
-2. Switch to the project where you want to test your package locally
-
-```bash
-cd your-test-project-directory
-npm link your-package-name
+`usePideKitUI` plugin options & type reference:
+```ts
+type PluginOptions = {
+  showLogs?: boolean
+  components?: {
+    globallyRegister: boolean
+    exclude?: ComponentName[]
+  }
+  plugins?: {
+    globallyRegister?: boolean
+    exclude: PluginName[]
+  }
+  directives?: {
+    globallyRegister?: boolean
+    exclude: DirectiveName[]
+  }
+}
 ```
 
-> [!NOTE] > `npm link` creates a symbolic link between your package and your test project. So if you build your package again, it will be reflected in your test project as well.
+`globallyRegister`: If **true**, all components/plugins/directives will be **registered globally**. If **false**, you need to import and register them **manually**. 
+If it is globally registered you don't need to import it, but for typesafe componant usage it is *recommended* to disable it for the 'componants' and import them manually.
 
-3. Ensure that your package version in `package.json` adheres to semantic versioning
-4. Log in to your NPM account
+`exclude`: Array of component/plugin/directive names to exclude from global registration (_if true_).
 
-```bash
-npm login
+`showLogs`: If **true**, import/exclude/error logs will be shown in the console on initial load.
+<hr>
+
+### Vite / VueCLI
+```js
+import { createApp } from 'vue'
+import { usePideKitUI } from 'pidekit'
+import App from './App.vue'
+import './style.css'
+
+const app = createApp(App)
+app.use(
+  usePideKitUI({
+    showLogs: true, // default: true
+    components: { 
+      globallyRegister: false, // default: false
+      exclude: []
+    },
+    plugins: {
+      globallyRegister: true, // default: true
+      exclude: ['customPlugin']
+    },
+    directives: {  
+      globallyRegister: true, // default: true
+      exclude: [] 
+    },
+  })
+)
+app.mount('#app')
+
 ```
 
-5. Run the following command to publish your package
-
-```bash
-npm publish
+### Nuxt3 ([nuxt plugins](https://nuxt.com/docs/guide/directory-structure/plugins))
+```js
+import { usePideKitUI } from 'pidekit'
+export default defineNuxtPlugin({
+  name: 'pidekit',
+  enforce: 'pre',
+  async setup(nuxtApp) {
+    nuxtApp.vueApp.use(
+      usePideKitUI({
+        showLogs: true, // default: true
+        components: { 
+          globallyRegister: false, // default: false
+          exclude: []
+        },
+        plugins: {
+          globallyRegister: true, // default: true
+          exclude: []
+        },
+        directives: {  
+          globallyRegister: true, // default: true
+          exclude: [] 
+        },
+      }),
+    );
+  },
+  hooks: {
+    'app:created'() {
+      const nuxtApp = useNuxtApp();
+    },
+  },
+});
 ```
 
-Congratulations! Your package is now published to npm 🎉 <br>
-
-<!-- USAGE EXAMPLES -->
 
 ## Usage
 
-> For user to edit this section:
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Import the components you want to use
+```js
+import { Button, Slider } from 'pidekit'
+```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+_For more examples, please refer to the [live docs](https://kaandesu.github.io/PideKit/#/)_
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-> For user to edit this section:
-
-- [x] Add vite configuration
-- [x] Add vitest
-- [x] Add workflows
-- [x] Add vitepress documentation
-- [ ] Some other stuff
-  - [ ] Stuff 1
-  - [ ] Stuff 2
-
-<!-- CONTRIBUTING -->
+- [x] Namespaced import for components
+- [x] vite & rollup bundle inspection
+- [x] Storybook documentation setup
+- [x] TailwindCSS setup
+- [x] Radix UI setup
+- [x] Vitest configuration with coverage
+- [x] Vitepress configuration
+- [ ] Dialog 
+- [ ] Slider
+- [ ] Select
+- [ ] Checkbox
+- [ ] Toggle
+- [ ] Toggle Group
+- [ ] Radio Group
+- [ ] Alert Dialog
+- [ ] Dropdown Menu
+- [ ] Menubar
+- [ ] Navigation Menu
+- [ ] Tabs
+- [ ] Popover
+- [ ] Avatar
+- [ ] Collapsible
+- [ ] Combobox
+- [ ] Context Menu
+- [ ] Hover Card
+- [ ] Label
+- [ ] Pagination
+- [ ] Pin Input
+- [ ] Aspect Ratio
+- [ ] Progress
+- [ ] Scroll Area
+- [ ] Separator
+- [ ] Switch
+- [ ] Tags Input
+- [ ] Toast
+- [ ] Toolbar
+- [ ] Tooltip
 
 ## Contributing
 
@@ -136,8 +198,9 @@ Distributed under the MIT License. See [LICENSE](LICENSE.md) for more informatio
 
 ## Contact
 
-> For user to edit this section:
+| Maintainer | E-Mail | Twitter |
+| --- | --- | --- |
+| [kaandesu](https://github.com/kaandesu) | kaandesu00@gmail.com | - |
+| [EgeOnder](https://github.com/EgeOnder) | 40398628+EgeOnder@users.noreply.github.com | [@EgeOnder23](https://twitter.com/EgeOnder23) |
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/kaandesu/PideKit](https://github.com/kaandesu/PideKit)

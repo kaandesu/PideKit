@@ -6,7 +6,7 @@ import type { PluginOptions, DirectiveName, PluginName, ComponentName } from './
 import './style.css'
 import { defu } from 'defu'
 
-const useComponentLibrary = (pluginOptions: PluginOptions): any => {
+const usePideKitUI = (pluginOptions: PluginOptions): any => {
   /* ADD YOUR DEFAULT CONFIGURATION BELOW */
   const DefaultPluginOptions: PluginOptions = {
     showLogs: true,
@@ -103,4 +103,4 @@ const log = (base: string, as: string | boolean, succ: boolean, showLogs: boolea
 export * from './components'
 export * from './directives'
 export * from './plugins'
-export { useComponentLibrary, components, directives, plugins }
+export { usePideKitUI, components, directives, plugins }

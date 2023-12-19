@@ -4,25 +4,37 @@
 
 - Opening a pull request without a description or a proper name is not fun for the reviewer, so try to explain your change as much as possible either by text or a code snippet.
 - Adding new dependencies or modifying the `package.json` will most likely be not accepted or will be accepted in a long time since adding a new dependency to the codebase can be tricky.
-- This project uses `npm`, so please try to respect the choice and try to use it.
+- This project uses `pnpm`, so please try to respect the choice and try to use it.
 
 ### 📝 Useful scripts
 
 These are the useful scripts that you can use while developing. You can find them in the `package.json` file. You can run them by using `npm run <script_name>`.
 
-| Script            | Description                                    |
-| ----------------- | ---------------------------------------------- |
-| `dev`             | Start the development environment              |
-| `build`           | Test and build the app and the `live-demo`     |
-| `build:live-demo` | Only build the `live-demo`                     |
-| `build:lib`       | Only build the `library`                       |
-| `coverage:web`    | Serve the test coverage report to localhost    |
-| `generate:types`  | Generate all the types for the project         |
-| `changeset`       | Adds a changelog to the project after a change |
-| `test`            | Run the tests once                             |
-| `test:watch`      | Watch the tests                                |
-| `test:coverage`   | Create a coverage report for the tests         |
-| `clean`           | Remove ./dist and ./live-demo directories      |
+| Script                | Description                                    |
+| ----------------------| ---------------------------------------------------------------------------------- |
+| `dev`                 | Start the development environment using Vite                                       |
+| `build`               | Test and build the app, library, and `live-demo`                                   |
+| `build:lib`           | Test and build the library                                                         |
+| `build:live-demo`     | Build the `live-demo`                                                              |
+| `coverage:web`        | Serve the test coverage report to localhost                                        |
+| `generate:types`      | Generate declaration files for the project using `vue-tsc`                         |
+| `changeset`           | Adds a changelog to the project after a change                                     |
+| `test`                | Run the tests once using Vitest                                                    |
+| `test:watch`          | Watch the tests with Vitest                                                        |
+| `test:coverage`       | Create a coverage report for the tests using Vitest                                |
+| `clean`               | Remove `./dist`, `./live-demo`, `./coverage`, and `./storybook-static` directories |
+| `build:pages`         | Build documentation, `live-demo`, and Storybook                                    |
+| `build:live-demo`     | Build the `live-demo` using Vite and output to `./docs/.vitepress/dist/live-demo`  |
+| `docs:dev`            | Start the Vitepress development server for documentation                           |
+| `docs:build`          | Build documentation using Vitepress                                                |
+| `docs:preview`        | Preview documentation using Vitepress                                              |
+| `storybook`           | Start Storybook development server                                                 |
+| `build-storybook`     | Build Storybook and output to `./docs/.vitepress/dist/storybook`                   |
+| `rollup:inspect`      | Serve Rollup inspection results                                                    |
+| `vite:inspect`        | Serve Vite inspection results                                                      |
+| `unbuild`             | Unbuild the project                                                                |
+| `generate:namespaced` | Generate namespaced import index file                                              |
+
 
 When pushing your changes, always include a **changeset** file. You can do this by running the `changeset` script. It will ask you a few questions and then create a file for you. You can read more about it [here](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md).
 
