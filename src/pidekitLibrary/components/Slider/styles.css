@@ -21,7 +21,7 @@
 
 .SliderRange {
   position: absolute;
-  background-color: white;
+  background-color: var(--grass-10);
   border-radius: 9999px;
   height: 100%;
 }
