@@ -22,3 +22,7 @@ export type PluginOptions = {
     exclude: DirectiveName[]
   }
 }
+
+export type Prettify<T> = {
+  [K in keyof T]: T[K]
+} & {}

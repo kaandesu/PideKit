@@ -1,14 +1,12 @@
 <template>
   <div style="display:flex; gap:1rem; flex-flow: column nowrap;width:100%">
-    <Button primary label="Hello World" size="large" />
-    <Button primary label="Hello World" size="medium" />
-    <Button primary label="Hello World" size="small" />
-    <hr>
-    <Dialog />
+    <Slider v-model="sliderVal" />
+    sliderVal from parent: {{ sliderVal }}
   </div>
 </template>
 <script setup lang="ts">
-
+import { ref } from 'vue'
+const sliderVal = ref([50])
 </script>
 <style scoped>
 .logo {
