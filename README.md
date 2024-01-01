@@ -37,11 +37,13 @@
 ## Installation & Setup
 
 Install the package from npm
+
 ```bash
 npm i pidekit
 ```
 
 `usePideKitUI` plugin options & type reference:
+
 ```ts
 type PluginOptions = {
   showLogs?: boolean
@@ -60,15 +62,17 @@ type PluginOptions = {
 }
 ```
 
-`globallyRegister`: If **true**, all components/plugins/directives will be **registered globally**. If **false**, you need to import and register them **manually**. 
-If it is globally registered you don't need to import it, but for typesafe componant usage it is *recommended* to disable it for the 'componants' and import them manually.
+`globallyRegister`: If **true**, all components/plugins/directives will be **registered globally**. If **false**, you need to import and register them **manually**.
+If it is globally registered you don't need to import it, but for typesafe componant usage it is _recommended_ to disable it for the 'componants' and import them manually.
 
 `exclude`: Array of component/plugin/directive names to exclude from global registration (_if true_).
 
 `showLogs`: If **true**, import/exclude/error logs will be shown in the console on initial load.
+
 <hr>
 
 ### Vite / VueCLI
+
 ```js
 import { createApp } from 'vue'
 import { usePideKitUI } from 'pidekit'
@@ -79,25 +83,25 @@ const app = createApp(App)
 app.use(
   usePideKitUI({
     showLogs: true, // default: true
-    components: { 
+    components: {
       globallyRegister: false, // default: false
-      exclude: []
+      exclude: [],
     },
     plugins: {
       globallyRegister: true, // default: true
-      exclude: ['customPlugin']
+      exclude: ['customPlugin'],
     },
-    directives: {  
+    directives: {
       globallyRegister: true, // default: true
-      exclude: [] 
+      exclude: [],
     },
-  })
+  }),
 )
 app.mount('#app')
-
 ```
 
 ### Nuxt3 ([nuxt plugins](https://nuxt.com/docs/guide/directory-structure/plugins))
+
 ```js
 import { usePideKitUI } from 'pidekit'
 export default defineNuxtPlugin({
@@ -107,38 +111,36 @@ export default defineNuxtPlugin({
     nuxtApp.vueApp.use(
       usePideKitUI({
         showLogs: true, // default: true
-        components: { 
+        components: {
           globallyRegister: false, // default: false
-          exclude: []
+          exclude: [],
         },
         plugins: {
           globallyRegister: true, // default: true
-          exclude: []
+          exclude: [],
         },
-        directives: {  
+        directives: {
           globallyRegister: true, // default: true
-          exclude: [] 
+          exclude: [],
         },
       }),
-    );
+    )
   },
   hooks: {
     'app:created'() {
-      const nuxtApp = useNuxtApp();
+      const nuxtApp = useNuxtApp()
     },
   },
-});
+})
 ```
-
 
 ## Usage
 
-
 Import the components you want to use
+
 ```js
 import { Button, Slider } from 'pidekit'
 ```
-
 
 _For more examples, please refer to the [live docs](https://kaandesu.github.io/PideKit/#/)_
 
@@ -153,7 +155,7 @@ _For more examples, please refer to the [live docs](https://kaandesu.github.io/P
 - [x] Radix UI setup
 - [x] Vitest configuration with coverage
 - [x] Vitepress configuration
-- [ ] Dialog 
+- [ ] Dialog
 - [ ] Slider
 - [ ] Select
 - [ ] Checkbox
@@ -198,9 +200,9 @@ Distributed under the MIT License. See [LICENSE](LICENSE.md) for more informatio
 
 ## Contact
 
-| Maintainer | E-Mail | Twitter |
-| --- | --- | --- |
-| [kaandesu](https://github.com/kaandesu) | kaandesu00@gmail.com | - |
+| Maintainer                              | E-Mail                                     | Twitter                                       |
+| --------------------------------------- | ------------------------------------------ | --------------------------------------------- |
+| [kaandesu](https://github.com/kaandesu) | kaandesu00@gmail.com                       | -                                             |
 | [EgeOnder](https://github.com/EgeOnder) | 40398628+EgeOnder@users.noreply.github.com | [@EgeOnder23](https://twitter.com/EgeOnder23) |
 
 Project Link: [https://github.com/kaandesu/PideKit](https://github.com/kaandesu/PideKit)

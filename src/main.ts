@@ -7,18 +7,18 @@ const app = createApp(App)
 app.use(
   usePideKitUI({
     showLogs: true, // default: true
-    components: { 
+    components: {
       globallyRegister: false, // default: false
-      exclude: []
+      exclude: [],
     },
     plugins: {
       globallyRegister: true, // default: true
-      exclude: ['customPlugin']
+      exclude: ['customPlugin'],
     },
-    directives: {  
+    directives: {
       globallyRegister: true, // default: true
-      exclude: [] 
+      exclude: [],
     },
-  })
+  }),
 )
 app.mount('#app')

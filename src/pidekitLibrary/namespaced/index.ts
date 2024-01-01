@@ -1,5 +1,17 @@
-
-import { Root, Trigger, Portal, Content, Overlay, Close, Title, Description, Root, Thumb, Track, Range } from '../components/Dialog/primitives'
+import {
+  Root,
+  Trigger,
+  Portal,
+  Content,
+  Overlay,
+  Close,
+  Title,
+  Description,
+  Root,
+  Thumb,
+  Track,
+  Range,
+} from '../components/Dialog/primitives'
 
 export const Dialog = {
   Root: Root,
@@ -10,7 +22,7 @@ export const Dialog = {
   Close: Close,
   Title: Title,
   Description: Description,
-}  as {
+} as {
   Root: typeof Root
   Trigger: typeof Trigger
   Portal: typeof Portal
@@ -26,7 +38,7 @@ export const Slider = {
   Thumb: Thumb,
   Track: Track,
   Range: Range,
-}  as {
+} as {
   Root: typeof Root
   Thumb: typeof Thumb
   Track: typeof Track

@@ -1,13 +1,15 @@
 <template>
-  <div style="display:flex; gap:1rem; flex-flow: column nowrap;width:100%">
+  <div style="display: flex; gap: 1rem; flex-flow: column nowrap; width: 100%">
     <Slider v-model="sliderVal" />
     sliderVal from parent: {{ sliderVal }}
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 const sliderVal = ref([50])
 </script>
+
 <style scoped>
 .logo {
   height: 6em;

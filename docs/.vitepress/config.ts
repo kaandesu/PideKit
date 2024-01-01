@@ -25,6 +25,8 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/kaandesu/pidekit' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/kaandesu/pidekit' },
+    ],
   },
 })
