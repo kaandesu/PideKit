@@ -2,7 +2,12 @@ import type { App } from 'vue'
 import * as plugins from './plugins'
 import * as components from './components'
 import * as directives from './directives'
-import type { PluginOptions, DirectiveName, PluginName, ComponentName } from './types'
+import type {
+  PluginOptions,
+  DirectiveName,
+  PluginName,
+  ComponentName,
+} from './types'
 import './style.css'
 import { defu } from 'defu'
 
@@ -85,7 +90,12 @@ const usePideKitUI = (pluginOptions: PluginOptions): any => {
   }
 }
 
-const log = (base: string, as: string | boolean, succ: boolean, showLogs: boolean = true) => {
+const log = (
+  base: string,
+  as: string | boolean,
+  succ: boolean,
+  showLogs: boolean = true,
+) => {
   if (!showLogs) return
   as = as !== false ? as : false
   let m = as ? `globally added %c as %c <${as}>` : `imported %c %c`
@@ -96,7 +106,7 @@ const log = (base: string, as: string | boolean, succ: boolean, showLogs: boolea
     'color:gray',
     'color:orange',
     'color:gray',
-    'color:teal; font-weight: bold;font-size: 1.2em'
+    'color:teal; font-weight: bold;font-size: 1.2em',
   )
 }
 

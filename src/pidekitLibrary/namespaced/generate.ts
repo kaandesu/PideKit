@@ -32,7 +32,9 @@ const namespaced = componentList.map((curr: Component) => {
 
 //! TODO: Change from link to 'pidekit' before release?????
 const template = `
-import { ${flattenComponents.join(', ')} } from '../components/Dialog/primitives'
+import { ${flattenComponents.join(
+  ', ',
+)} } from '../components/Dialog/primitives'
 
 ${namespaced.map((component) => component).join('\n\n')}
 `

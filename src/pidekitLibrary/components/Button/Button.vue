@@ -6,32 +6,31 @@
 
 <script lang="ts" setup>
 import './button.css'
-import { computed } from 'vue';
+import { computed } from 'vue'
 interface ButtonProps {
-  label: string,
-  primary?: boolean,
-  size?: 'small' | 'medium' | 'large',
-  backgroundColor?: string,
+  label: string
+  primary?: boolean
+  size?: 'small' | 'medium' | 'large'
+  backgroundColor?: string
 }
-const props = withDefaults(defineProps<ButtonProps>(), { primary: false });
+const props = withDefaults(defineProps<ButtonProps>(), { primary: false })
 
 const emit = defineEmits<{
-  (e: 'click', id: number): void;
-}>();
+  (e: 'click', id: number): void
+}>()
 
 const classes = computed(() => ({
   'storybook-button': true,
   'storybook-button--primary': props.primary,
   'storybook-button--secondary': !props.primary,
   [`storybook-button--${props.size || 'medium'}`]: true,
-}));
+}))
 
 const style = computed(() => ({
-  backgroundColor: props.backgroundColor
-}));
+  backgroundColor: props.backgroundColor,
+}))
 
 const onClick = () => {
-  emit("click", 1)
-};
-
+  emit('click', 1)
+}
 </script>

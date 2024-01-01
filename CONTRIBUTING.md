@@ -10,8 +10,8 @@
 
 These are the useful scripts that you can use while developing. You can find them in the `package.json` file. You can run them by using `npm run <script_name>`.
 
-| Script                | Description                                    |
-| ----------------------| ---------------------------------------------------------------------------------- |
+| Script                | Description                                                                        |
+| --------------------- | ---------------------------------------------------------------------------------- |
 | `dev`                 | Start the development environment using Vite                                       |
 | `build`               | Test and build the app, library, and `live-demo`                                   |
 | `build:lib`           | Test and build the library                                                         |
@@ -34,7 +34,10 @@ These are the useful scripts that you can use while developing. You can find the
 | `vite:inspect`        | Serve Vite inspection results                                                      |
 | `unbuild`             | Unbuild the project                                                                |
 | `generate:namespaced` | Generate namespaced import index file                                              |
-
+| `lint:check`          | Checks the linting of the project with ESLint                                      |
+| `lint:fix`            | Fixes the fixable lint issues with ESLint                                          |
+| `format:check`        | Checks the formatting of the project with Prettier                                 |
+| `format:fix`          | Fixes the fixable formatting issues with Prettier                                  |
 
 When pushing your changes, always include a **changeset** file. You can do this by running the `changeset` script. It will ask you a few questions and then create a file for you. You can read more about it [here](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md).
 
