@@ -1,3 +1,4 @@
+import { Thumb, Track } from '~/components/Slider/primitives'
 import {
   Root,
   Trigger,
@@ -7,10 +8,6 @@ import {
   Close,
   Title,
   Description,
-  Root,
-  Thumb,
-  Track,
-  Range,
 } from '../components/Dialog/primitives'
 
 export const Dialog = {

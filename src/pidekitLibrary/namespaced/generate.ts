@@ -17,7 +17,6 @@ const namespaced = componentList.map((curr: Component) => {
   })
 
   if (Object.keys(tmp).length === 0) return `export { ${key} }`
-  // eslint-disable-next-line max-statements-per-line
   else
     return `export const ${key} = {\n${Object.keys(tmp)
       .map((k) => {
@@ -30,7 +29,8 @@ const namespaced = componentList.map((curr: Component) => {
       .join('')}}`
 })
 
-//! TODO: Change from link to 'pidekit' before release?????
+// TODO: Change from link to 'pidekit' before release?????
+// TODO: Why do you import everything from "Dialog"?
 const template = `
 import { ${flattenComponents.join(
   ', ',
