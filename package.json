@@ -71,7 +71,7 @@
     "rollup:inspect": "npx serve .rollup-inspect",
     "vite:inspect": "npx serve .vite-inspect",
     "unbuild": "unbuild",
-    "generate:namespaced": "tsx ./src/pidekitLibrary/namespaced/generate",
+    "generate:namespaced": "tsx ./src/pidekitLibrary/namespaced/generate && prettier --write ./src/pidekitLibrary/namespaced/index.ts",
     "lint:check": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:fix": "eslint --ext \".ts,.vue\" --ignore-path .gitignore --fix .",
     "format:check": "prettier --check .",

@@ -22,7 +22,7 @@ const namespaced = componentList.map((curr: Component) => {
       .map((k) => {
         return `  ${k}: ${tmp[k]},\n`
       })
-      .join('')}}  as {\n${Object.keys(tmp)
+      .join('')}} as {\n${Object.keys(tmp)
       .map((k) => {
         return `  ${k}: typeof ${tmp[k]}\n`
       })
