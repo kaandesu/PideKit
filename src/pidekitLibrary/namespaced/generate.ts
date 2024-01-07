@@ -7,7 +7,7 @@ const componentList = Object.keys(components) as Component[]
 const flattenComponents = Object.values(components).flat()
 
 const namespaced = componentList.map((curr: Component) => {
-  const key = curr.charAt(0).toUpperCase() + curr.slice(1)
+  const key = curr.charAt(1).toUpperCase() + curr.slice(1)
   const tmp: Record<string, string> = {}
 
   const values = components[curr]
@@ -16,25 +16,32 @@ const namespaced = componentList.map((curr: Component) => {
     if (truncated) tmp[truncated] = val
   })
 
-  if (Object.keys(tmp).length === 0) return `export { ${key} }`
+  if (Object.keys(tmp).length === 1) return `export { ${curr} }`
+  // eslint-disable-next-line max-statements-per-line
   else
-    return `export const ${key} = {\n${Object.keys(tmp)
+    return `export const ${curr} = {\n${Object.keys(tmp)
       .map((k) => {
-        return `  ${k}: ${tmp[k]},\n`
+        return `  ${k}: ${curr}${tmp[k]},\n`
       })
-      .join('')}} as {\n${Object.keys(tmp)
+      .join('')}}  as {\n${Object.keys(tmp)
       .map((k) => {
-        return `  ${k}: typeof ${tmp[k]}\n`
+        return `  ${k}: typeof ${curr}${tmp[k]}\n`
       })
       .join('')}}`
 })
 
-// TODO: Change from link to 'pidekit' before release?????
-// TODO: Why do you import everything from "Dialog"?
 const template = `
-import { ${flattenComponents.join(
-  ', ',
-)} } from '../components/Dialog/primitives'
+${componentList
+  .map((component) => {
+    const uniquePrimitives = new Set(
+      flattenComponents.filter((prim) => components[component].includes(prim)),
+    )
+
+    return `import { ${[...uniquePrimitives]
+      .map((c) => `${c} as ${component}${c}`)
+      .join(', ')} } from '../components/${component}/primitives'`
+  })
+  .join('\n\n')}
 
 ${namespaced.map((component) => component).join('\n\n')}
 `

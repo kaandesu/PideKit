@@ -1,5 +1,5 @@
 export const components = {
-  dialog: [
+  Dialog: [
     'Root',
     'Trigger',
     'Portal',
@@ -9,5 +9,5 @@ export const components = {
     'Title',
     'Description',
   ],
-  slider: ['Root', 'Thumb', 'Track', 'Range'],
+  Slider: ['Root', 'Thumb', 'Track', 'Range'],
 }
