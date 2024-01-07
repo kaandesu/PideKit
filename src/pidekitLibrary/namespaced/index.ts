@@ -1,46 +1,49 @@
 import {
-  Root,
-  Trigger,
-  Portal,
-  Content,
-  Overlay,
-  Close,
-  Title,
-  Description,
-  Root,
-  Thumb,
-  Track,
-  Range,
+  Root as DialogRoot,
+  Trigger as DialogTrigger,
+  Portal as DialogPortal,
+  Content as DialogContent,
+  Overlay as DialogOverlay,
+  Close as DialogClose,
+  Title as DialogTitle,
+  Description as DialogDescription,
 } from '../components/Dialog/primitives'
 
+import {
+  Root as SliderRoot,
+  Thumb as SliderThumb,
+  Track as SliderTrack,
+  Range as SliderRange,
+} from '../components/Slider/primitives'
+
 export const Dialog = {
-  Root: Root,
-  Trigger: Trigger,
-  Portal: Portal,
-  Content: Content,
-  Overlay: Overlay,
-  Close: Close,
-  Title: Title,
-  Description: Description,
+  Root: DialogRoot,
+  Trigger: DialogTrigger,
+  Portal: DialogPortal,
+  Content: DialogContent,
+  Overlay: DialogOverlay,
+  Close: DialogClose,
+  Title: DialogTitle,
+  Description: DialogDescription,
 } as {
-  Root: typeof Root
-  Trigger: typeof Trigger
-  Portal: typeof Portal
-  Content: typeof Content
-  Overlay: typeof Overlay
-  Close: typeof Close
-  Title: typeof Title
-  Description: typeof Description
+  Root: typeof DialogRoot
+  Trigger: typeof DialogTrigger
+  Portal: typeof DialogPortal
+  Content: typeof DialogContent
+  Overlay: typeof DialogOverlay
+  Close: typeof DialogClose
+  Title: typeof DialogTitle
+  Description: typeof DialogDescription
 }
 
 export const Slider = {
-  Root: Root,
-  Thumb: Thumb,
-  Track: Track,
-  Range: Range,
+  Root: SliderRoot,
+  Thumb: SliderThumb,
+  Track: SliderTrack,
+  Range: SliderRange,
 } as {
-  Root: typeof Root
-  Thumb: typeof Thumb
-  Track: typeof Track
-  Range: typeof Range
+  Root: typeof SliderRoot
+  Thumb: typeof SliderThumb
+  Track: typeof SliderTrack
+  Range: typeof SliderRange
 }
