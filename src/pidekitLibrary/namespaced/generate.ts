@@ -7,27 +7,23 @@ const componentList = Object.keys(components) as Component[]
 const flattenComponents = Object.values(components).flat()
 
 const namespaced = componentList.map((curr: Component) => {
-  const key = curr.charAt(1).toUpperCase() + curr.slice(1)
   const tmp: Record<string, string> = {}
 
   const values = components[curr]
   values.forEach((val) => {
-    const truncated = val.replace(key, '')
+    const truncated = val.replace(curr, '')
     if (truncated) tmp[truncated] = val
   })
-
-  if (Object.keys(tmp).length === 1) return `export { ${curr} }`
   // eslint-disable-next-line max-statements-per-line
-  else
-    return `export const ${curr} = {\n${Object.keys(tmp)
-      .map((k) => {
-        return `  ${k}: ${curr}${tmp[k]},\n`
-      })
-      .join('')}}  as {\n${Object.keys(tmp)
-      .map((k) => {
-        return `  ${k}: typeof ${curr}${tmp[k]}\n`
-      })
-      .join('')}}`
+  return `export const ${curr} = {\n${Object.keys(tmp)
+    .map((k) => {
+      return `  ${k}: ${curr}${tmp[k]},\n`
+    })
+    .join('')}}  as {\n${Object.keys(tmp)
+    .map((k) => {
+      return `  ${k}: typeof ${curr}${tmp[k]}\n`
+    })
+    .join('')}}`
 })
 
 const template = `
