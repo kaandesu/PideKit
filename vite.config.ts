@@ -37,11 +37,7 @@ export default defineConfig(({ mode }) => {
   } else {
     return {
       plugins: [
-        vue({
-          script: {
-            defineModel: true,
-          },
-        }),
+        vue(),
         Components({
           dts: true,
           globs: ['src/pidekitLibrary/components/**/*.vue'],
