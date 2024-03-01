@@ -78,7 +78,7 @@ devDependencies:
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
   eslint-plugin-tailwindcss:
     specifier: ^3.13.1
-    version: 3.13.1(tailwindcss@3.3.6)
+    version: 3.13.1(tailwindcss@3.4.1)
   eslint-plugin-vue:
     specifier: ^9.21.1
     version: 9.21.1(eslint@8.56.0)
@@ -110,8 +110,8 @@ devDependencies:
     specifier: ^2.1.0
     version: 2.1.0
   tailwindcss:
-    specifier: ^3.3.6
-    version: 3.3.6
+    specifier: ^3.4.1
+    version: 3.4.1
   tsx:
     specifier: ^4.6.2
     version: 4.6.2
@@ -6587,7 +6587,7 @@ packages:
       synckit: 0.8.8
     dev: true
 
-  /eslint-plugin-tailwindcss@3.13.1(tailwindcss@3.3.6):
+  /eslint-plugin-tailwindcss@3.13.1(tailwindcss@3.4.1):
     resolution: {integrity: sha512-2Nlgr9doO6vFAG9w4iGU0sspWXuzypfng10HTF+dFS2NterhweWtgdRvf/f7aaoOUUxVZM8wMIXzazrZ7CxyeA==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -6595,7 +6595,7 @@ packages:
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.32
-      tailwindcss: 3.3.6
+      tailwindcss: 3.4.1
     dev: true
 
   /eslint-plugin-vue@9.21.1(eslint@8.56.0):
@@ -9037,29 +9037,29 @@ packages:
       postcss: 8.4.32
     dev: true
 
-  /postcss-import@15.1.0(postcss@8.4.32):
+  /postcss-import@15.1.0(postcss@8.4.33):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
-      postcss: 8.4.32
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
     dev: true
 
-  /postcss-js@4.0.1(postcss@8.4.32):
+  /postcss-js@4.0.1(postcss@8.4.33):
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
     peerDependencies:
       postcss: ^8.4.21
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.32
+      postcss: 8.4.33
     dev: true
 
-  /postcss-load-config@4.0.2(postcss@8.4.32):
+  /postcss-load-config@4.0.2(postcss@8.4.33):
     resolution: {integrity: sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==}
     engines: {node: '>= 14'}
     peerDependencies:
@@ -9072,7 +9072,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
+      postcss: 8.4.33
       yaml: 2.3.4
     dev: true
 
@@ -9151,6 +9151,16 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.32
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-nested@6.0.1(postcss@8.4.33):
+    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.33
       postcss-selector-parser: 6.0.13
     dev: true
 
@@ -10590,8 +10600,8 @@ packages:
       '@babel/runtime': 7.23.6
     dev: true
 
-  /tailwindcss@3.3.6:
-    resolution: {integrity: sha512-AKjF7qbbLvLaPieoKeTjG1+FyNZT6KaJMJPFeQyLfIp7l82ggH1fbHJSsYIvnbTFQOlkh+gBYpyby5GT1LIdLw==}
+  /tailwindcss@3.4.1:
+    resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -10609,11 +10619,11 @@ packages:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.0
-      postcss: 8.4.32
-      postcss-import: 15.1.0(postcss@8.4.32)
-      postcss-js: 4.0.1(postcss@8.4.32)
-      postcss-load-config: 4.0.2(postcss@8.4.32)
-      postcss-nested: 6.0.1(postcss@8.4.32)
+      postcss: 8.4.33
+      postcss-import: 15.1.0(postcss@8.4.33)
+      postcss-js: 4.0.1(postcss@8.4.33)
+      postcss-load-config: 4.0.2(postcss@8.4.33)
+      postcss-nested: 6.0.1(postcss@8.4.33)
       postcss-selector-parser: 6.0.13
       resolve: 1.22.8
       sucrase: 3.34.0
