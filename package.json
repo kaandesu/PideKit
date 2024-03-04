@@ -86,7 +86,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@radix-ui/colors": "^3.0.0",
-    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
     "@storybook/blocks": "^7.6.12",
